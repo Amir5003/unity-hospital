@@ -1,5 +1,5 @@
 'use client';
-
+import { use } from 'react';
 import { doctors } from "../../../data/doctors";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -14,10 +14,20 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function DoctorsPage({ params }: { params: { id: string } }) {
+
+// type Doctor = (typeof doctors)[number];
+
+type PageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export default function DoctorsPage({ params }: PageProps) {
+  const { id } = use(params); // ✅ unwrap the params Promise
   const router = useRouter();
-  const { id } = params;
+
   const doctor = doctors.find((doc) => doc.id === id);
+  // const { id } = params;
+  // const doctor = doctors.find((doc) => doc.id === id);
 
   // Animation state
   const [show, setShow] = useState(false);
