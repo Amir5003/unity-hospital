@@ -34,7 +34,7 @@ const Hero = React.forwardRef<HTMLDivElement>((props, ref) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // WhatsApp message
-    const message = `Appointment Request:\nName: ${form.name}\nAge: ${form.age}\nAddress: ${form.address}\nMobile: ${form.mobile}\nDoctor: ${form.doctor}\nSymptoms: ${form.symptoms}`;
+    // const message = `Appointment Request:\nName: ${form.name}\nAge: ${form.age}\nAddress: ${form.address}\nMobile: ${form.mobile}\nDoctor: ${form.doctor}\nSymptoms: ${form.symptoms}`;
 
     // const mailto = `mailto:unityhospitalpurnea@gmail.com?subject=Appointment Request&body=${encodeURIComponent(message)}`;
 
