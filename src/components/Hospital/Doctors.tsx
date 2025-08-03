@@ -30,7 +30,7 @@ const Doctors = React.forwardRef<HTMLDivElement>((props, ref) => {
       </Typography>
       <Grid container spacing={3}>
         {doctors.map((doc) => (
-          <Grid item xs={12} sm={6} md={4} key={doc.name}>
+          <Grid  key={doc.name}>
             <Box sx={{ cursor: "pointer" }} onClick={()=>handleCardClick(doc.id)}>
               <Card
                 sx={{

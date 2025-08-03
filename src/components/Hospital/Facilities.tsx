@@ -15,7 +15,7 @@ const Facilities = React.forwardRef<HTMLDivElement>((props, ref) => (
         { title: 'Here we can have ot image or something similar', img: '/facility1.jpg' },
         { title: 'Comfortable Patient Rooms or something similar more images we can add', img: '/facility3.jpg' },
       ].map((fac) => (
-        <Grid item xs={12} sm={4} key={fac.title}>
+        <Grid key={fac.title} >
           <Card sx={{ borderRadius: 3, boxShadow: 2 }}>
             <CardMedia>
               <Image src={fac.img} alt={fac.title} width={400} height={160} style={{ objectFit: 'cover', width: '100%' }} />

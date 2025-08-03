@@ -17,7 +17,7 @@ const Contact = React.forwardRef<HTMLDivElement>((props, ref) => (
       Contact & Location
     </Typography>
     <Grid container spacing={3}>
-      <Grid item xs={12} md={6}>
+      <Grid >
         <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
           <Typography variant="body1" sx={{ mb: 1 }}>
             <LocationOnIcon
